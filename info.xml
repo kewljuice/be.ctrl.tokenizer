@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<extension key="be.ctrl.tokenizer” type="module">
+<extension key="be.ctrl.tokenizer" type="module">
   <file>tokenizer</file>
   <name>CiviCRM Tokenizer extension</name>
   <description>Tokenizer: Custom tokens for CiviCRM</description>

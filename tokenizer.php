@@ -1,14 +1,14 @@
 <?php
 
-require_once 'nsynch.civix.php';
+require_once 'tokenizer.civix.php';
 
 /**
  * Implementation of hook_civicrm_config
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_config
  */
-function nsynch_civicrm_config(&$config) {
-  _nsynch_civix_civicrm_config($config);
+function tokenizer_civicrm_config(&$config) {
+  _tokenizer_civix_civicrm_config($config);
 }
 
 /**
@@ -18,8 +18,8 @@ function nsynch_civicrm_config(&$config) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_xmlMenu
  */
-function nsynch_civicrm_xmlMenu(&$files) {
-  _nsynch_civix_civicrm_xmlMenu($files);
+function tokenizer_civicrm_xmlMenu(&$files) {
+  _tokenizer_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -27,8 +27,8 @@ function nsynch_civicrm_xmlMenu(&$files) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_install
  */
-function nsynch_civicrm_install() {
-  _nsynch_civix_civicrm_install();
+function tokenizer_civicrm_install() {
+  _tokenizer_civix_civicrm_install();
 }
 
 /**
@@ -36,8 +36,8 @@ function nsynch_civicrm_install() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_uninstall
  */
-function nsynch_civicrm_uninstall() {
-  _nsynch_civix_civicrm_uninstall();
+function tokenizer_civicrm_uninstall() {
+  _tokenizer_civix_civicrm_uninstall();
 }
 
 /**
@@ -45,9 +45,9 @@ function nsynch_civicrm_uninstall() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
-function nsynch_civicrm_enable() {
-	// continue
-  _nsynch_civix_civicrm_enable();
+function tokenizer_civicrm_enable() {
+  // continue
+  _tokenizer_civix_civicrm_enable();
 }
 
 /**
@@ -55,9 +55,9 @@ function nsynch_civicrm_enable() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
  */
-function nsynch_civicrm_disable() {
+function tokenizer_civicrm_disable() {
   // continue
-	_nsynch_civix_civicrm_disable();
+  _tokenizer_civix_civicrm_disable();
 }
 
 /**
@@ -71,8 +71,8 @@ function nsynch_civicrm_disable() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_upgrade
  */
-function nsynch_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _nsynch_civix_civicrm_upgrade($op, $queue);
+function tokenizer_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
+  return _tokenizer_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -83,8 +83,8 @@ function nsynch_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_managed
  */
-function nsynch_civicrm_managed(&$entities) {
-  _nsynch_civix_civicrm_managed($entities);
+function tokenizer_civicrm_managed(&$entities) {
+  _tokenizer_civix_civicrm_managed($entities);
 }
 
 /**
@@ -96,8 +96,8 @@ function nsynch_civicrm_managed(&$entities) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_caseTypes
  */
-function nsynch_civicrm_caseTypes(&$caseTypes) {
-  _nsynch_civix_civicrm_caseTypes($caseTypes);
+function tokenizer_civicrm_caseTypes(&$caseTypes) {
+  _tokenizer_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -105,22 +105,22 @@ function nsynch_civicrm_caseTypes(&$caseTypes) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_alterSettingsFolders
  */
-function nsynch_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _nsynch_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function tokenizer_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
+  _tokenizer_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
  * buildform
  */
-function nsynch_civicrm_buildForm($formName, &$form) {
-	// set buildForm
+function tokenizer_civicrm_buildForm($formName, &$form) {
+  // set buildForm
 }
 
 /**
  * pagerun
  */
-function nsynch_civicrm_pageRun( &$page ) {
-	// set pageRun
+function tokenizer_civicrm_pageRun(&$page) {
+  // set pageRun
 }
 
 
