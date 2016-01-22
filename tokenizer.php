@@ -123,5 +123,55 @@ function tokenizer_civicrm_pageRun(&$page) {
   // set pageRun
 }
 
+/**
+ * implementation of hook_civicrm_tokens()
+ */
+function tokenizer_civicrm_tokens(&$tokens) {
+  $tokens['ctrl'] = array(
+    'ctrl.hello' => 'Token for printing hello world + cid'
+  );
+}
 
- 
+/**
+ * implementation of hook_civicrm_tokenValues()
+ */
+function tokenizer_civicrm_tokenValues(&$values, $cids, $job = NULL, $tokens = array(), $context = NULL) {
+
+  // Don't print country in mailing label if country is equal CiviCRM default country.
+  if ($context == 'CRM_Contact_Form_Task_Label') {
+    // CiviCRM default country
+    $result = civicrm_api3('Setting', 'get', array(
+      'sequential' => 1,
+      'return' => "defaultContactCountry",
+    ));
+    $default = $result["values"][0]["defaultContactCountry"];
+    // Replace tokens for each contact
+    foreach ($cids as $cid) {
+      // Select 'contact' tokens.
+      foreach ($tokens['contact'] as $name) {
+        switch ($name) {
+          case 'country':
+            $country = $values[$cid]['country_id'];
+            if ($country == $default) {
+              $values[$cid]['country'] = "";
+            }
+            break;
+        }
+      }
+    }
+  }
+
+  // Custom tokens.
+  foreach ($cids as $cid) {
+    // Select 'ctrl' tokens.
+    watchdog('tokenizer', print_r($tokens['ctrl'],true));
+    foreach ($tokens['ctrl'] as $name) {
+      switch ($name) {
+        case 'hello':
+          $values[$cid]['ctrl.hello'] = "Hello contact id: $cid";
+          break;
+      }
+    }
+  }
+}
+
