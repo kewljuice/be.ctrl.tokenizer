@@ -23,6 +23,6 @@
   </compatibility>
   <comments></comments>
   <civix>
-    <namespace>CRM/tokenizer</namespace>
+    <namespace>CRM/ctrl/tokenizer</namespace>
   </civix>
 </extension>
