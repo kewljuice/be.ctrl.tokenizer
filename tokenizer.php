@@ -162,6 +162,7 @@ function tokenizer_civicrm_tokenValues(&$values, $cids, $job = NULL, $tokens = a
   }
 
   // Custom tokens.
+  /*
   foreach ($cids as $cid) {
     // Select 'ctrl' tokens.
     watchdog('tokenizer', print_r($tokens['ctrl'],true));
@@ -173,5 +174,6 @@ function tokenizer_civicrm_tokenValues(&$values, $cids, $job = NULL, $tokens = a
       }
     }
   }
+  */
 }
 
